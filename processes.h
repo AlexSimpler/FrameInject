@@ -4,7 +4,6 @@
 #define _CRT_SECURE_NO_WARNINGS
 #include "dependencies.hpp"
 #include "globals.hpp"
-#include "Utils.hpp"
 
 namespace GameFuckerUI {
 	using namespace System;
