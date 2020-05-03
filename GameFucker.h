@@ -397,7 +397,6 @@ namespace GameFuckerUI {
 	private: System::Void textBox2_TextChanged(System::Object^ sender, System::EventArgs^ e) {
 	}
 	private: System::Void button5_Click(System::Object^ sender, System::EventArgs^ e) {
-		this->ProcName->Text = "csgo.exe";
 		processes^ processSelect = gcnew processes(this);
 		processSelect->ShowDialog();
 	}
