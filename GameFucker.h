@@ -387,29 +387,7 @@ namespace GameFuckerUI {
 	private: System::Void MyForm_Load(System::Object^ sender, System::EventArgs^ e) {
 	}
 	private: System::Void button2_Click(System::Object^ sender, System::EventArgs^ e) {
-		msclr::interop::marshal_context oMarshalContext;
-
-		const char* proc = oMarshalContext.marshal_as<const char*>(this->ProcName->Text);
-		const char* dll = oMarshalContext.marshal_as<const char*>(this->fullpath->Text);
-
-		if (checkNotAlpha(proc) && checkNotAlpha(dll)) {
-			g.procName = proc;
-			g.dll_name = dll;
-			if (g.procName != NULL && g.dll_name != NULL) {
-				if (g.llib && !g.mmap) {
-					Injector::Init();
-				}
-				else {
-					Utils::error("Only LLIB injections are available at the moment.");
-				}
-			}
-			else {
-				Utils::error("Inavlid process name / dll name.");
-			}
-		}
-		else {
-			Utils::error("Please enter the process/dll names.");
-		}
+		
 	}
 	private: System::Void button3_Click(System::Object^ sender, System::EventArgs^ e) {
 	}
