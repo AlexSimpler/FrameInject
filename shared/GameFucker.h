@@ -343,7 +343,7 @@ namespace GameFuckerUI {
 			this->Controls->Add(this->ProcName);
 			this->FormBorderStyle = System::Windows::Forms::FormBorderStyle::FixedSingle;
 #ifdef RELEASE
-			this->Icon = gcnew System::Drawing::Icon("../resources/hello.ico");
+			this->Icon = gcnew System::Drawing::Icon("./resources/hello.ico");
 #endif // DEBUG
 			this->Name = L"MyForm";
 			this->StartPosition = System::Windows::Forms::FormStartPosition::CenterScreen;
