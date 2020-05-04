@@ -14,6 +14,6 @@ Choose stable as the release version and choose `x64`,`x86` according to your pr
 
 ## Copyright
 
-Made in 2020 by AlexSimpler / Flickery.
+Made in 2020 by AlexSimpler / Flickery#4649.
 
 All rights reserved©
