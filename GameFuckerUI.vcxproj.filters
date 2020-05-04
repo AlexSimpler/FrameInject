@@ -1,0 +1,102 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;c++;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;h++;hm;inl;inc;ipp;xsd</Extensions>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="Header Files\dependencies">
+      <UniqueIdentifier>{307dd265-e5ac-4e48-9a54-41c683bbf51b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Injector">
+      <UniqueIdentifier>{b683de5d-a739-49fc-a0dc-3a66ce8f2635}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Injector">
+      <UniqueIdentifier>{e0d07295-ac8e-4295-926c-4b0943f292dd}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Utilities">
+      <UniqueIdentifier>{6b4aa4cb-962e-4387-a1c9-c8d1995e2263}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Utilities">
+      <UniqueIdentifier>{f7cd1d50-7823-478a-ad29-eb7ff5768bf7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Utilities\variables">
+      <UniqueIdentifier>{06c21e91-8b09-4fc1-aab5-df4d0ad6e0f6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Utilities\variables">
+      <UniqueIdentifier>{3f0c0740-a8dc-4b51-8af7-fbef6ce76c79}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\dependencies">
+      <UniqueIdentifier>{eb835d4a-aa14-4db5-9518-1c70e09c9386}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="README.md">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="resources\Resource.aps">
+      <Filter>Resource Files</Filter>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="shared\dependencies\dependencies.hpp">
+      <Filter>Header Files\dependencies</Filter>
+    </ClInclude>
+    <ClInclude Include="shared\GameFucker.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="shared\processes.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="shared\resource.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="shared\Injector\Init.hpp">
+      <Filter>Header Files\Injector</Filter>
+    </ClInclude>
+    <ClInclude Include="shared\Utilities\Utils.hpp">
+      <Filter>Header Files\Utilities</Filter>
+    </ClInclude>
+    <ClInclude Include="shared\Utilities\variables\globals.hpp">
+      <Filter>Header Files\Utilities\variables</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="src\GameFucker.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Injector\Init.cpp">
+      <Filter>Source Files\Injector</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Utilities\utility.cpp">
+      <Filter>Source Files\Utilities</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Utilities\variables\globals.cpp">
+      <Filter>Source Files\Utilities\variables</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="resources\processes.resx">
+      <Filter>Resource Files</Filter>
+    </EmbeddedResource>
+    <EmbeddedResource Include="resources\Resource.resx">
+      <Filter>Resource Files</Filter>
+    </EmbeddedResource>
+    <EmbeddedResource Include="resources\GameFucker.resx">
+      <Filter>Header Files</Filter>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="resources\Resource.rc">
+      <Filter>Resource Files</Filter>
+    </ResourceCompile>
+  </ItemGroup>
+</Project>

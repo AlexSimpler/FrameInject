@@ -7,20 +7,20 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "GameFuckerUI", "GameFuckerU
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
-		Debug|x64 = Debug|x64
-		Debug|x86 = Debug|x86
-		Release|x64 = Release|x64
-		Release|x86 = Release|x86
+		Dev|x64 = Dev|x64
+		Dev|x86 = Dev|x86
+		Stable|x64 = Stable|x64
+		Stable|x86 = Stable|x86
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{43B67E0D-3529-4C14-928F-E41935065AC5}.Debug|x64.ActiveCfg = Debug|x64
-		{43B67E0D-3529-4C14-928F-E41935065AC5}.Debug|x64.Build.0 = Debug|x64
-		{43B67E0D-3529-4C14-928F-E41935065AC5}.Debug|x86.ActiveCfg = Debug|Win32
-		{43B67E0D-3529-4C14-928F-E41935065AC5}.Debug|x86.Build.0 = Debug|Win32
-		{43B67E0D-3529-4C14-928F-E41935065AC5}.Release|x64.ActiveCfg = Release|x64
-		{43B67E0D-3529-4C14-928F-E41935065AC5}.Release|x64.Build.0 = Release|x64
-		{43B67E0D-3529-4C14-928F-E41935065AC5}.Release|x86.ActiveCfg = Release|Win32
-		{43B67E0D-3529-4C14-928F-E41935065AC5}.Release|x86.Build.0 = Release|Win32
+		{43B67E0D-3529-4C14-928F-E41935065AC5}.Dev|x64.ActiveCfg = Dev|x64
+		{43B67E0D-3529-4C14-928F-E41935065AC5}.Dev|x64.Build.0 = Dev|x64
+		{43B67E0D-3529-4C14-928F-E41935065AC5}.Dev|x86.ActiveCfg = Dev|Win32
+		{43B67E0D-3529-4C14-928F-E41935065AC5}.Dev|x86.Build.0 = Dev|Win32
+		{43B67E0D-3529-4C14-928F-E41935065AC5}.Stable|x64.ActiveCfg = Stable|x64
+		{43B67E0D-3529-4C14-928F-E41935065AC5}.Stable|x64.Build.0 = Stable|x64
+		{43B67E0D-3529-4C14-928F-E41935065AC5}.Stable|x86.ActiveCfg = Dev|Win32
+		{43B67E0D-3529-4C14-928F-E41935065AC5}.Stable|x86.Build.0 = Dev|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

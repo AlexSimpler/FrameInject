@@ -3,7 +3,7 @@
 #include <Windows.h>
 #include <string>
 #include <thread>//Threads
-#include <libloaderapi.h>//load the api inside the target app
+#include <libloaderapi.h>
 #include <fileapi.h>
 #include <vector>
 #include <TlHelp32.h>

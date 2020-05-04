@@ -14,7 +14,7 @@ public:
 	BOOL mmap = FALSE;
 	BOOL debug = FALSE;
 	BOOL closeOnInjection = FALSE;
-	BOOL msgBoxes = FALSE;
+	BOOL msgBoxes = TRUE;
 
 	//current console window
 	HWND console = NULL;
