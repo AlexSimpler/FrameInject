@@ -7,6 +7,7 @@
 using namespace System::Windows::Forms;
 using namespace msclr::interop;
 
+/* Used to convert System::string to std::string - taken from msdn */
 void MarshalString(System::String^ s, std::string& os) {
     using namespace System::Runtime::InteropServices;
     const char* chars =
@@ -15,7 +16,7 @@ void MarshalString(System::String^ s, std::string& os) {
     Marshal::FreeHGlobal(System::IntPtr((void*)chars));
 }
 
-
+/* Iterates through each string character and checks if a number is present */
 bool is_number(const std::string& s)
 {
     std::string::const_iterator it = s.begin();
@@ -43,6 +44,7 @@ int ListViewColumnSorter::Compare(System::Object^ x, System::Object^ y)
     MarshalString(listviewX->SubItems[ColumnToSort]->Text, subitemX);
     MarshalString(listviewY->SubItems[ColumnToSort]->Text, subitemY);
 
+    /* if the sub item is a number then convert the subitem in an int32 and compare and return 1, 0 or -1 */
     if (is_number(subitemX) || is_number(subitemY))
     {
         __int32 subitemX = System::Int32::Parse(listviewX->SubItems[ColumnToSort]->Text);
@@ -73,30 +75,4 @@ int ListViewColumnSorter::Compare(System::Object^ x, System::Object^ y)
     }
 }
 
-/// <summary>
-/// Gets or sets the number of the column to which to apply the sorting operation (Defaults to '0').
-/// </summary>
-
-//void ListViewColumnSorter::SortColumn::set(int value)
-//{
-//    ColumnToSort = value;
-//}
-//
-//int ListViewColumnSorter::SortColumn::get()
-//{
-//    return ColumnToSort;
-//}
-
-/// <summary>
-/// Gets or sets the order of sorting to apply (for example, 'Ascending' or 'Descending').
-/// </summary>
-//void ListViewColumnSorter::SortOrder::set(System::Windows::Forms::SortOrder value)
-//{
-//    OrderOfSort = value;
-//}
-//
-//System::Windows::Forms::SortOrder ListViewColumnSorter::SortOrder::get()
-//{
-//    return OrderOfSort;
-//}
 
