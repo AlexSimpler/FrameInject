@@ -1,6 +1,6 @@
 ﻿#pragma once
 
-#define RELEASE //use for icon
+#define RELEASE //use to compile the icon
 
 #include "./Injector/Init.hpp"
 #include "./Utilities/Utils.hpp"
