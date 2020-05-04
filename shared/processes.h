@@ -4,7 +4,6 @@
 #include "./dependencies/dependencies.hpp"
 #include "./Utilities/variables/globals.hpp"
 #include "./Utilities/Utils.hpp"
-//#include "./Utilities/Sorting.hpp"//TODO fix sorting algorithm
 
 namespace GameFuckerUI {
 	using namespace System;
@@ -29,6 +28,7 @@ namespace GameFuckerUI {
 	private:
 		//create the temp mainForm object
 		MyForm^ mainForm;
+		ListViewColumnSorter^ lvwColumnSorter = nullptr;
 	public:
 		processes(void)
 		{
@@ -49,6 +49,8 @@ namespace GameFuckerUI {
 		{
 			mainForm = callingForm; 
 			InitializeComponent();
+			lvwColumnSorter = gcnew ListViewColumnSorter();
+			this->ProcessList->ListViewItemSorter = lvwColumnSorter;
 		}
 
 	protected:
@@ -289,27 +291,27 @@ namespace GameFuckerUI {
 	private: System::Void COLUMN_Click(System::Object^ sender, System::Windows::Forms::ColumnClickEventArgs^ e) {
 		
 		//TOFIX: to be fixed soon
-		//if (e->Column == lvwColumnSorter->So  )
-		//{
-		//	// Reverse the current sort direction for this column.
-		//	if (lvwColumnSorter->Order == SortOrder::Ascending)
-		//	{
-		//		lvwColumnSorter->Order = SortOrder::Descending;
-		//	}
-		//	else
-		//	{
-		//		lvwColumnSorter->Order = SortOrder::Ascending;
-		//	}
-		//}
-		//else
-		//{
-		//	// Set the column number that is to be sorted; default to ascending.
-		//	lvwColumnSorter->SortColumn = e->Column;
-		//	lvwColumnSorter->Order = SortOrder::Ascending;
-		//}
+		if (e->Column == lvwColumnSorter->SortColumn)
+		{
+			// Reverse the current sort direction for this column.
+			if (lvwColumnSorter->SortOrder == SortOrder::Ascending)
+			{
+				lvwColumnSorter->SortOrder = SortOrder::Descending;
+			}
+			else
+			{
+				lvwColumnSorter->SortOrder = SortOrder::Ascending;
+			}
+		}
+		else
+		{
+			// Set the column number that is to be sorted; default to ascending.
+			lvwColumnSorter->SortColumn = e->Column;
+			lvwColumnSorter->SortOrder = SortOrder::Ascending;
+		}
 
 		//// Perform the sort with these new sort options.
-		//this->ProcessList->Sort();
+		this->ProcessList->Sort();
 
 	}
 

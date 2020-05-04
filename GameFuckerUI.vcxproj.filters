@@ -68,6 +68,9 @@
     <ClInclude Include="shared\Utilities\variables\globals.hpp">
       <Filter>Header Files\Utilities\variables</Filter>
     </ClInclude>
+    <ClInclude Include="shared\Utilities\Sorting.hpp">
+      <Filter>Header Files\Utilities</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\GameFucker.cpp">
@@ -81,6 +84,9 @@
     </ClCompile>
     <ClCompile Include="src\Utilities\variables\globals.cpp">
       <Filter>Source Files\Utilities\variables</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Utilities\Sorting.cpp">
+      <Filter>Source Files\Utilities</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>

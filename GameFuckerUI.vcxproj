@@ -166,12 +166,14 @@
       <FileType>CppForm</FileType>
     </ClInclude>
     <ClInclude Include="shared\resource.h" />
+    <ClInclude Include="shared\Utilities\Sorting.hpp" />
     <ClInclude Include="shared\Utilities\Utils.hpp" />
     <ClInclude Include="shared\Utilities\variables\globals.hpp" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\GameFucker.cpp" />
     <ClCompile Include="src\Injector\Init.cpp" />
+    <ClCompile Include="src\Utilities\Sorting.cpp" />
     <ClCompile Include="src\Utilities\utility.cpp" />
     <ClCompile Include="src\Utilities\variables\globals.cpp" />
   </ItemGroup>

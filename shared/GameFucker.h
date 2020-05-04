@@ -5,6 +5,7 @@
 #include "./Injector/Init.hpp"
 #include "./Utilities/Utils.hpp"
 #include "./Utilities/variables/globals.hpp"
+#include "../shared/Utilities/Sorting.hpp"
 
 /* Required libraries to use PostMessageA */
 #pragma comment(lib, "user32.lib")
@@ -343,7 +344,7 @@ namespace GameFuckerUI {
 			this->Controls->Add(this->ProcName);
 			this->FormBorderStyle = System::Windows::Forms::FormBorderStyle::FixedSingle;
 #ifdef RELEASE
-			this->Icon = gcnew System::Drawing::Icon("./resources/hello.ico");
+			this->Icon = gcnew System::Drawing::Icon("C:/Users/admob/source/repos/GameFuckerUI/resources/hello.ico");
 #endif // DEBUG
 			this->Name = L"MyForm";
 			this->StartPosition = System::Windows::Forms::FormStartPosition::CenterScreen;
