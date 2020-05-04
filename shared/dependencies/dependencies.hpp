@@ -1,3 +1,4 @@
+/* Libraries used throughout the project */
 #pragma once
 #include <iostream>
 #include <Windows.h>
