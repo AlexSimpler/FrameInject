@@ -3,10 +3,6 @@ A simple Open Source LLIB DLL injector made with C++/CLI.
 
 PS: _<small>Don't mind some file names, I couldn't change them without recreating my whole project...</small>_
 
-![](https://i.imgur.com/hK9Wu5G.png)
-
-^Beta launcher, not in project.
-
 ![](https://i.imgur.com/kOgnMd3.png)
 
 
@@ -15,6 +11,10 @@ Choose stable as the release version and choose `x64`,`x86` according to your pr
 
 ## TODO:
 - fix debug checkbox - for now not working properly
+- Release loader:
+
+![](https://i.imgur.com/hK9Wu5G.png)
+
 
 ## Copyright
 
