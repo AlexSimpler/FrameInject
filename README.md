@@ -1,7 +1,7 @@
 ## GameDestroyer
 A simple Open Source LLIB DLL injector made with C++/CLI.
 
-<small>Don't mind some file names I couldn't change them...</small>
+PS: _<small>Don't mind some file names I couldn't change them...</small>_
 
 ![](https://i.imgur.com/hK9Wu5G.png)
 
