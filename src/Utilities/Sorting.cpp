@@ -74,5 +74,3 @@ int ListViewColumnSorter::Compare(System::Object^ x, System::Object^ y)
         return 0;
     }
 }
-
-
