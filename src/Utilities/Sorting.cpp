@@ -1,21 +1,26 @@
 /// <summary>
 /// This class is an implementation of the 'IComparer' interface.
 /// </summary>
-
+#include "../../shared/dependencies/dependencies.hpp"
 #include "../../shared/Utilities/Sorting.hpp"
 
 using namespace System::Windows::Forms;
+using namespace msclr::interop;
 
-ListViewColumnSorter::ListViewColumnSorter()
+void MarshalString(System::String^ s, std::string& os) {
+    using namespace System::Runtime::InteropServices;
+    const char* chars =
+        (const char*)(Marshal::StringToHGlobalAnsi(s)).ToPointer();
+    os = chars;
+    Marshal::FreeHGlobal(System::IntPtr((void*)chars));
+}
+
+
+bool is_number(const std::string& s)
 {
-    // Initialize the column to '0'
-    ColumnToSort = 0;
-
-    // Initialize the sort order to 'none'
-    OrderOfSort = System::Windows::Forms::SortOrder::None;
-
-    // Initialize the CaseInsensitiveComparer object
-    ObjectCompare = gcnew System::Collections::CaseInsensitiveComparer();
+    std::string::const_iterator it = s.begin();
+    while (it != s.end() && std::isdigit(*it)) ++it;
+    return !s.empty() && it == s.end();
 }
 
 /// <summary>
@@ -33,9 +38,22 @@ int ListViewColumnSorter::Compare(System::Object^ x, System::Object^ y)
     listviewX = cli::safe_cast<ListViewItem^>(x);
     listviewY = cli::safe_cast<ListViewItem^>(y);
 
-        // Compare the two items
-        compareResult = ObjectCompare->Compare(listviewX->SubItems[ColumnToSort].Text,
-            listviewY->SubItems[ColumnToSort].Text);
+    std::string subitemX = "";
+    std::string subitemY = "";
+    MarshalString(listviewX->SubItems[ColumnToSort]->Text, subitemX);
+    MarshalString(listviewY->SubItems[ColumnToSort]->Text, subitemY);
+
+    if (is_number(subitemX) || is_number(subitemY))
+    {
+        __int32 subitemX = System::Int32::Parse(listviewX->SubItems[ColumnToSort]->Text);
+        __int32 subitemY = System::Int32::Parse(listviewY->SubItems[ColumnToSort]->Text);
+        compareResult = (subitemX < subitemY) ? 1 : ((subitemX > subitemY) ? -1 : 0);
+    }
+    else {
+        compareResult = ObjectCompare->Compare(listviewX->SubItems[ColumnToSort]->Text,
+            listviewY->SubItems[ColumnToSort]->Text);
+    }
+    
 
     // Calculate correct return value based on object comparison
     if (OrderOfSort == System::Windows::Forms::SortOrder::Ascending)
@@ -58,25 +76,27 @@ int ListViewColumnSorter::Compare(System::Object^ x, System::Object^ y)
 /// <summary>
 /// Gets or sets the number of the column to which to apply the sorting operation (Defaults to '0').
 /// </summary>
-void ListViewColumnSorter::SortColumn::set(int value)
-{
-    ColumnToSort = value;
-}
 
-int ListViewColumnSorter::SortColumn::get()
-{
-    return ColumnToSort;
-}
+//void ListViewColumnSorter::SortColumn::set(int value)
+//{
+//    ColumnToSort = value;
+//}
+//
+//int ListViewColumnSorter::SortColumn::get()
+//{
+//    return ColumnToSort;
+//}
 
 /// <summary>
 /// Gets or sets the order of sorting to apply (for example, 'Ascending' or 'Descending').
 /// </summary>
-void ListViewColumnSorter::SortOrder::set(System::Windows::Forms::SortOrder value)
-{
-    OrderOfSort = value;
-}
+//void ListViewColumnSorter::SortOrder::set(System::Windows::Forms::SortOrder value)
+//{
+//    OrderOfSort = value;
+//}
+//
+//System::Windows::Forms::SortOrder ListViewColumnSorter::SortOrder::get()
+//{
+//    return OrderOfSort;
+//}
 
-System::Windows::Forms::SortOrder ListViewColumnSorter::SortOrder::get()
-{
-    return OrderOfSort;
-}
