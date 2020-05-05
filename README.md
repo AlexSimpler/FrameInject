@@ -17,3 +17,5 @@ Choose stable as the release version and choose `x64`,`x86` according to your pr
 ## Copyright
 
 Made in 2020 by AlexSimpler.
+
+MIT license.
