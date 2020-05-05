@@ -11,7 +11,7 @@
 #pragma comment(lib, "user32.lib")
 #pragma comment(lib, "shlwapi.lib")
 
-namespace GameFuckerUI {
+namespace FrameInject {
 	//ref class processes;
 	using namespace System;
 	using namespace System::ComponentModel;
