@@ -1,5 +1,5 @@
 ## FrameInject
-A simple Open Source LLIB DLL injector made with C++/CLI.
+A simple Open Source LLIB DLL injector made with C++ and C++/CLI.
 
 ![](https://i.imgur.com/kOgnMd3.png)
 
@@ -16,6 +16,4 @@ Choose stable as the release version and choose `x64`,`x86` according to your pr
 
 ## Copyright
 
-Made in 2020 by AlexSimpler / Flickery#4649.
-
-All rights reserved©
+Made in 2020 by AlexSimpler.
