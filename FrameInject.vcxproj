@@ -23,7 +23,7 @@
     <ProjectGuid>{43B67E0D-3529-4C14-928F-E41935065AC5}</ProjectGuid>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <Keyword>ManagedCProj</Keyword>
-    <RootNamespace>GameFuckerUI</RootNamespace>
+    <RootNamespace>FrameInject</RootNamespace>
     <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
@@ -80,20 +80,20 @@
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Dev|x64'">
     <OutDir>.\bin\$(Configuration)\</OutDir>
     <IntDir>.\junk\$(Platform)\$(Configuration)\</IntDir>
-    <TargetName>GameFucker64</TargetName>
+    <TargetName>FrameInject64</TargetName>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Stable|x64'">
     <OutDir>.\bin\$(Configuration)\</OutDir>
     <IntDir>.\junk\$(Platform)\$(Configuration)\</IntDir>
-    <TargetName>GameFucker64</TargetName>
+    <TargetName>FrameInject64</TargetName>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Dev|Win32'">
-    <TargetName>GameFucker86</TargetName>
+    <TargetName>FrameInject86</TargetName>
     <IntDir>.\junk\$(Platform)\$(Configuration)\</IntDir>
     <OutDir>.\bin\$(Configuration)\</OutDir>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Stable|Win32'">
-    <TargetName>GameFucker86</TargetName>
+    <TargetName>FrameInject86</TargetName>
     <IntDir>.\junk\$(Platform)\$(Configuration)\</IntDir>
     <OutDir>.\bin\$(Configuration)\</OutDir>
   </PropertyGroup>
@@ -158,7 +158,7 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="shared\dependencies\dependencies.hpp" />
-    <ClInclude Include="shared\GameFucker.h">
+    <ClInclude Include="shared\FrameInject.h">
       <FileType>CppForm</FileType>
     </ClInclude>
     <ClInclude Include="shared\Injector\Init.hpp" />
@@ -171,18 +171,18 @@
     <ClInclude Include="shared\Utilities\variables\globals.hpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="src\GameFucker.cpp" />
+    <ClCompile Include="src\FrameInject.cpp" />
     <ClCompile Include="src\Injector\Init.cpp" />
     <ClCompile Include="src\Utilities\Sorting.cpp" />
     <ClCompile Include="src\Utilities\utility.cpp" />
     <ClCompile Include="src\Utilities\variables\globals.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="resources\GameFucker.resx" />
+    <EmbeddedResource Include="resources\FrameInject.resx" />
     <EmbeddedResource Include="resources\processes.resx" />
     <EmbeddedResource Include="resources\Resource.resx" />
-    <EmbeddedResource Include="shared\GameFucker.resx">
-      <DependentUpon>shared\GameFucker.h</DependentUpon>
+    <EmbeddedResource Include="shared\FrameInject.resx">
+      <DependentUpon>shared\FrameInject.h</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="shared\processes.resx">
       <DependentUpon>shared\processes.h</DependentUpon>
