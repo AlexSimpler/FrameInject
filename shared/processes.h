@@ -1,7 +1,5 @@
 ﻿#pragma once
 
-#define RELEASE
-
 #include "GameFucker.h"
 #include "./dependencies/dependencies.hpp"
 #include "./Utilities/variables/globals.hpp"
@@ -139,6 +137,9 @@ namespace GameFuckerUI {
 				String^ pid = gcnew String(pcstrPid);
 
 				ListViewItem^ proc = gcnew ListViewItem(procName);
+				if (pe32.th32ProcessID == g.myWind)
+					continue;
+
 				proc->SubItems->Add(pid);
 				proc->SubItems->Add(CheckProcessType(hProcess) ? "x86" : "x64");
 				proc->Tag = procName;
@@ -258,9 +259,6 @@ namespace GameFuckerUI {
 			this->Controls->Add(this->label1);
 			this->Controls->Add(this->ProcessList);
 			this->FormBorderStyle = System::Windows::Forms::FormBorderStyle::FixedToolWindow;
-#ifdef RELEASE
-			this->Icon = gcnew System::Drawing::Icon("your_icon_path");
-#endif
 			this->Name = L"processes";
 			this->StartPosition = System::Windows::Forms::FormStartPosition::CenterParent;
 			this->Text = L"遊戲混蛋";
