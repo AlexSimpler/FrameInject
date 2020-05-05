@@ -1,6 +1,6 @@
 ﻿#pragma once
 
-#include "GameFucker.h"
+#include "FrameInject.h"
 #include "./dependencies/dependencies.hpp"
 #include "./Utilities/variables/globals.hpp"
 #include "./Utilities/Utils.hpp"
