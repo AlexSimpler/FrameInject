@@ -1,21 +1,21 @@
 #include "../shared/dependencies/dependencies.hpp"
 #include "../shared/processes.h"
-#include "../shared/GameFucker.h"
+#include "../shared/FrameInject.h"
 
 using namespace System;
 using namespace System::Windows::Forms;
 
 /**********************************************************************************************//**
- * @fn	System::Void GameFuckerUI::MyForm::button5_Click(System::Object^ sender, System::EventArgs^ e)
+ * @fn	System::Void FrameInject::MyForm::button5_Click(System::Object^ sender, System::EventArgs^ e)
  *
  * @brief	When the Find button is clicked, open the proceses winform.
  *
  * @param 	sender	The sender.
  * @param 	e	  	The System::EventArgs to process.
  **************************************************************************************************/
-System::Void GameFuckerUI::MyForm::Find_Click(System::Object^ sender, System::EventArgs^ e)
+System::Void FrameInject::MyForm::Find_Click(System::Object^ sender, System::EventArgs^ e)
 {
-	GameFuckerUI::processes^ processSelect = gcnew GameFuckerUI::processes(this);
+	FrameInject::processes^ processSelect = gcnew FrameInject::processes(this);
 	processSelect->ShowDialog();
 }
 
@@ -33,7 +33,7 @@ System::Void GameFuckerUI::MyForm::Find_Click(System::Object^ sender, System::Ev
 int main(array<String^>^ args) {
 	Application::EnableVisualStyles();
 	Application::SetCompatibleTextRenderingDefault(false);
-	GameFuckerUI::MyForm form;
+	FrameInject::MyForm form;
 	Application::Run(% form);
 
 	return 0;
