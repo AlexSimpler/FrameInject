@@ -16,12 +16,12 @@ void Injector::Init(void)
 		cout << "Made by Flickery#4969" << endl;
 		cout << endl;
 	}
-	Inject::Checks(g.dll_name, (char*)g.dll_path, g.procName);//checking for dll validity
+	Inject::Checks((char*)g.dll_path, g.procName);//checking for dll validity
 }
 
-bool Injector::Inject::Checks(PCSTR dll_name, char* dll_path, PCSTR procName)
+bool Injector::Inject::Checks(char* dll_path, PCSTR procName)
 {
-	if (!Utils::file_exists(dll_name))
+	if (!Utils::file_exists(dll_path))
 		return Utils::error("File does not exist.");
 	Utils::successInput("Prepared DLL for injection");
 
@@ -48,7 +48,7 @@ bool Injector::Inject::Checks(PCSTR dll_name, char* dll_path, PCSTR procName)
 	Llib();
 	Utils::successInput("Loaded dll into target");
 
-	Release(dll_name, g.allocatedMemory);
+	Release(dll_path, g.allocatedMemory);
 	Utils::successInput("Successfully released memory");
 
 	if (g.msgBoxes)
@@ -75,7 +75,7 @@ bool Injector::Inject::Llib() {
 	return true;
 }
 
-bool Injector::Inject::Release(PCSTR dll_name, void* allocatedMemory)
+bool Injector::Inject::Release(PCSTR dll_path, void* allocatedMemory)
 {
 	//close handle
 	CloseHandle(g.h_process);

@@ -5,9 +5,11 @@ public:
 	DWORD proc_id = NULL;
 	HANDLE h_process = NULL;
 	void* allocatedMemory = NULL;
-	char* dll_path[MAX_PATH] = {};
 	PCSTR procName = NULL;//get the name of the window
-	PCSTR dll_name = NULL; //get the dll
+
+	//Dll related stuff
+	char* dll_path = NULL; //get the dll path
+	const char* dll_name = NULL;
 
 	//window checkboxes
 	BOOL llib = TRUE;
@@ -15,6 +17,9 @@ public:
 	BOOL debug = FALSE;
 	BOOL closeOnInjection = FALSE;
 	BOOL msgBoxes = TRUE;
+
+	//current window
+	DWORD myWind = NULL;
 
 	//current console window
 	HWND console = NULL;
