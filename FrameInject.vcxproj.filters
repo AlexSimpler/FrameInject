@@ -50,7 +50,7 @@
     <ClInclude Include="shared\dependencies\dependencies.hpp">
       <Filter>Header Files\dependencies</Filter>
     </ClInclude>
-    <ClInclude Include="shared\GameFucker.h">
+    <ClInclude Include="shared\FrameInject.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="shared\processes.h">
@@ -73,7 +73,7 @@
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="src\GameFucker.cpp">
+    <ClCompile Include="src\FrameInject.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="src\Injector\Init.cpp">
@@ -96,7 +96,7 @@
     <EmbeddedResource Include="resources\Resource.resx">
       <Filter>Resource Files</Filter>
     </EmbeddedResource>
-    <EmbeddedResource Include="resources\GameFucker.resx">
+    <EmbeddedResource Include="resources\FrameInject.resx">
       <Filter>Header Files</Filter>
     </EmbeddedResource>
   </ItemGroup>
