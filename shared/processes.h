@@ -5,7 +5,7 @@
 #include "./Utilities/variables/globals.hpp"
 #include "./Utilities/Utils.hpp"
 
-namespace GameFuckerUI {
+namespace FrameInject {
 	using namespace System;
 	using namespace System::ComponentModel;
 	using namespace System::Collections;
