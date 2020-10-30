@@ -1,0 +1,20 @@
+/* Libraries used throughout the project */
+#pragma once
+#include <iostream>
+#include <Windows.h>
+#include <string>
+#include <thread>//Threads
+#include <libloaderapi.h>
+#include <fileapi.h>
+#include <vector>
+#include <TlHelp32.h>
+#include <WinUser.h>
+#include <thread>
+#include <memory>
+#include <stdexcept>
+#include <cstdio>
+#include <array>
+#include <filesystem>
+#include <Shlwapi.h>
+#include <msclr\marshal_cppstd.h>
+#include <codecvt>
